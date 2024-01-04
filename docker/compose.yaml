@@ -1,0 +1,21 @@
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: app/Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ../:/app
+    restart: always
+  test:
+    container_name: test
+    build:
+      context: .
+      dockerfile: test/Dockerfile
+    ports:
+      - 5050:8080
+    volumes:
+      - ../:/test
+    restart: always

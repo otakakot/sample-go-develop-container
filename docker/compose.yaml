@@ -1,13 +1,13 @@
 services:
-  app:
-    container_name: app
+  server:
+    container_name: server
     build:
       context: .
-      dockerfile: app/Dockerfile
+      dockerfile: server/Dockerfile
     ports:
       - 8080:8080
     volumes:
-      - ../:/app
+      - ../:/server
     restart: always
   test:
     container_name: test

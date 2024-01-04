@@ -4,6 +4,4 @@ WORKDIR /server
 
 RUN go install github.com/cosmtrek/air@latest
 
-WORKDIR /server
-
 CMD ["air"]
